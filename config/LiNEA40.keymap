@@ -57,7 +57,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,,,
+            //スクロール方向を逆転,,,,
             <&zip_xy_to_scroll_mapper>;
     };
 };
@@ -142,7 +142,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans            &trans    &trans     &trans
             >;
 
-            sensor-bindings = <&mouse_scrl SCRL_RIGHT SCRL_LEFT>;
+            sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
         };
 
         //2
@@ -162,11 +162,13 @@
 
         CURSOR {
             bindings = <
-&trans    &kp LC(LG(LEFT_ARROW))  &kp UP_ARROW  &kp LC(LG(RIGHT_ARROW))  &trans                       &kp KP_MULTIPLY  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp KP_PLUS
-&trans    &kp LEFT_ARROW          &kp DOWN      &kp RIGHT_ARROW          &trans                       &kp KP_SLASH     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp KP_MINUS
-&kp HOME  &kp PAGE_DOWN           &kp END       &kp PAGE_UP              &trans                       &kp UNDER        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp ENTER
-&trans    &trans                  &trans        &trans                   &trans  &trans    &kp ENTER  &kp NUMBER_0                   &kp DOT       &kp ENTER     &kp QUESTION
+&trans    &kp LC(LG(LEFT_ARROW))  &kp UP_ARROW  &kp LC(LG(RIGHT_ARROW))  &trans                       &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp KP_SLASH     &kp KP_PLUS
+&trans    &kp LEFT_ARROW          &kp DOWN      &kp RIGHT_ARROW          &trans                       &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp KP_MINUS     &kp KP_MINUS
+&kp HOME  &kp PAGE_DOWN           &kp END       &kp PAGE_UP              &trans                       &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp KP_MULTIPLY  &kp ENTER
+&trans    &trans                  &trans        &trans                   &trans  &trans    &kp ENTER  &kp NUMBER_0                &kp DOT       &kp KP_PLUS      &kp QUESTION
             >;
+
+            sensor-bindings = <&mouse_scrl SCRL_RIGHT SCRL_LEFT>;
         };
 
         //4
