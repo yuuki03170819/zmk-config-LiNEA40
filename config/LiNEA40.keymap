@@ -57,7 +57,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,,,,,,,,,,,,,,,,,
+            //スクロール方向を逆転,,,,,,,,,,,,,,,,,,
             <&zip_xy_to_scroll_mapper>;
     };
 };
@@ -156,10 +156,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans                  &kp LG(D)    &trans             &trans                     &trans  &kp LEFT  &kp UP    &kp RIGHT  &trans
-&trans  &kp LC(LG(LEFT_ARROW))  &kp LG(TAB)  &kp LC(LG(RIGHT))  &trans                     &trans  &mkp MB1  &kp DOWN  &mkp MB2   &trans
-&trans  &trans                  &trans       &trans             &trans                     &trans  &mkp MB4  &mkp MB3  &mkp MB5   &trans
-&trans  &trans                  &trans       &trans             &trans  &trans    &kp DEL  &trans            &trans    &trans     &trans
+&trans  &trans                  &kp LG(D)                          &trans                                  &trans                     &trans  &kp LEFT  &kp UP    &kp RIGHT  &trans
+&trans  &kp LC(LG(LEFT_ARROW))  &kp LG(TAB)                        &kp LC(LG(RIGHT))                       &trans                     &trans  &mkp MB1  &kp DOWN  &mkp MB2   &trans
+&trans  &trans                  &kp C_AC_DESKTOP_SHOW_ALL_WINDOWS  &kp C_AC_DESKTOP_SHOW_ALL_APPLICATIONS  &trans                     &trans  &mkp MB4  &mkp MB3  &mkp MB5   &trans
+&trans  &trans                  &trans                             &trans                                  &trans  &trans    &kp DEL  &trans            &trans    &trans     &trans
             >;
 
             sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
@@ -167,10 +167,10 @@
 
         MARK {
             bindings = <
-&kp EXCLAMATION  &kp AT  &kp HASH  &kp DOLLAR               &kp PERCENT                       &kp CARET  &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp LBKT
-&kp TAB          &none   &none     &kp LANGUAGE_1           &kp LANGUAGE_2                    &none      &kp EQUAL      &kp INT3      &kp LEFT_BRACKET      &kp RIGHT_BRACKET
-&kp LEFT_SHIFT   &none   &none     &kp LANG_ZENKAKUHANKAKU  &kp LC(SPACE)                     &none      &none          &kp SEMI      &kp APOS              &kp BACKSLASH
-&trans           &trans  &trans    &trans                   &trans          &trans    &trans  &trans                    &kp ASTERISK  &kp SLASH             &kp INT1
+&kp EXCLAMATION  &kp AT          &kp HASH          &kp DOLLAR        &kp PERCENT                       &kp CARET  &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp LBKT
+&kp TAB          &kp LANGUAGE_2  &kp LANG_HANGEUL  &kp INT_MUHENKAN  &kp INT_HENKAN                    &none      &kp EQUAL      &kp INT3      &kp LEFT_BRACKET      &kp RIGHT_BRACKET
+&kp LEFT_SHIFT   &none           &none             &none             &none                             &none      &none          &kp SEMI      &kp APOS              &kp BACKSLASH
+&trans           &trans          &trans            &trans            &trans          &trans    &trans  &trans                    &kp ASTERISK  &kp SLASH             &kp INT1
             >;
 
             sensor-bindings = <&re_kp C_VOLUME_UP C_VOL_DN>;
@@ -184,14 +184,14 @@
 &trans  &trans  &trans  &trans   &trans   &kp LS(LEFT_ALT)    &trans  &trans              &trans               &kp LC(LA(DELETE))  &kp LC(LS(ESCAPE))
             >;
 
-            sensor-bindings = <&mouse_scrl SCRL_RIGHT SCRL_LEFT>;
+            sensor-bindings = <&re_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
         CURSOR {
             bindings = <
-&trans    &kp LC(LG(LEFT_ARROW))  &kp UP_ARROW  &kp LC(LG(RIGHT_ARROW))  &trans                       &kp KP_DIVIDE    &kp N7        &kp N8         &kp N9        &kp PERCENT
-&trans    &kp LEFT_ARROW          &kp DOWN      &kp RIGHT_ARROW          &trans                       &kp KP_MULTIPLY  &kp NUMBER_4  &kp N5         &kp NUMBER_6  &kp KP_MINUS
-&kp HOME  &kp PAGE_DOWN           &kp END       &kp PAGE_UP              &trans                       &kp N0           &kp NUMBER_1  &kp NUMBER_2   &kp NUMBER_3  &kp KP_PLUS
+&trans    &kp LC(LG(LEFT_ARROW))  &kp UP_ARROW  &kp LC(LG(RIGHT_ARROW))  &trans                       &kp KP_DIVIDE    &kp N7        &kp N8         &kp N9        &kp KP_MINUS
+&trans    &kp LEFT_ARROW          &kp DOWN      &kp RIGHT_ARROW          &trans                       &kp KP_MULTIPLY  &kp NUMBER_4  &kp N5         &kp NUMBER_6  &kp KP_PLUS
+&kp HOME  &kp PAGE_DOWN           &kp END       &kp PAGE_UP              &trans                       &kp N0           &kp NUMBER_1  &kp NUMBER_2   &kp NUMBER_3  &kp PERCENT
 &trans    &trans                  &trans        &trans                   &trans  &trans    &kp ENTER  &trans                         &kp BACKSPACE  &kp DOT       &kp MINUS
             >;
 
